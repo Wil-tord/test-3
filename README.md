@@ -1,89 +1,127 @@
 # Pêndulo Simples
 
-Projeto Final de Física I - Simulação Interativa em JavaScript.
-
-## Objetivo do Projeto
-
-Este projeto explora o **pêndulo simples**, um sistema físico que ilustra os conceitos de oscilação, energia mecânica e movimento harmônico simples. A proposta é entender e simular o comportamento do pêndulo com base em suas equações diferenciais.
+Projeto final de Física I: Uma introdução ao comportamento oscilatório de um pêndulo simples, com explicações claras e organizadas.
 
 ---
 
-## Fundamentos do Pêndulo Simples
+## **Introdução**
 
-O pêndulo simples é definido como uma massa \(m\) suspensa por um fio de comprimento \(L\), que oscila sob a influência da gravidade \(g\). Suas oscilações podem ser descritas pela seguinte equação diferencial:
+O pêndulo simples é uma ferramenta clássica na física para estudar oscilações. Ele consiste em um corpo suspenso por um fio que, ao ser deslocado de sua posição de equilíbrio, realiza movimentos oscilatórios devido à força gravitacional.
 
-\[
-\frac{d^2\theta}{dt^2} + \frac{g}{L}\sin(\theta) = 0
-\]
-
-### Simplificação para Pequenas Oscilações
-
-Para valores pequenos de \(θ\) (em radianos), podemos aproximar \(\sin(\theta) \approx \theta\), simplificando a equação para:
-
-\[
-\frac{d^2\theta}{dt^2} + \frac{g}{L}\theta = 0
-\]
-
-Esta é a equação de movimento harmônico simples (MHS), com solução analítica:
-
-\[
-\theta(t) = \theta_0 \cos\left(\sqrt{\frac{g}{L}}t\right)
-\]
-
-- \(θ(t)\): Deslocamento angular em função do tempo.
-- \(\theta_0\): Ângulo inicial (em radianos).
-- \(T = 2\pi \sqrt{\frac{L}{g}}\): Período do pêndulo.
+![Pêndulo Simples - Placeholder](assets/pendulum.png)
 
 ---
 
-## Equações Relacionadas
+## **Equações Fundamentais**
 
-1. **Velocidade Angular (\(\omega\)):**
+As equações que regem o movimento do pêndulo são:
 
-   \[
-   \omega(t) = -\theta_0 \sqrt{\frac{g}{L}} \sin\left(\sqrt{\frac{g}{L}}t\right)
-   \]
+### 1. **Equação Geral**
 
-2. **Aceleração Angular (\(\alpha\)):**
+O movimento do pêndulo pode ser descrito pela seguinte equação diferencial de segunda ordem:
 
-   \[
-   \alpha(t) = -\frac{g}{L} \theta(t)
-   \]
+![Equação Geral](assets/equation_1.png)
 
-3. **Energia Mecânica:**
+Essa equação descreve o movimento do pêndulo em função do ângulo de deslocamento (\(θ\)) e da aceleração gravitacional (\(g\)).
 
-   - Energia cinética (\(E_k\)): \( \frac{1}{2}mv^2 \)
-   - Energia potencial (\(E_p\)): \( mgh \)
+### 2. **Aproximação para Pequenos Ângulos**
 
-   A energia total (\(E_t\)) do sistema é conservada:
-   \[
-   E_t = E_k + E_p
-   \]
+Quando o ângulo de oscilação é pequeno (\(θ \ll 1\)), podemos aproximar o seno do ângulo por sua própria medida (ou seja, \( \sin(\theta) \approx \theta \)). Com isso, a equação do movimento se simplifica para:
 
----
+![Equação Simplificada](assets/equation_2.png)
 
-## Aplicações Reais
+Este é o modelo de **Movimento Harmônico Simples (MHS)**, o qual é muito mais fácil de resolver e fornece resultados mais próximos das oscilações reais para pequenos ângulos.
 
-- **Relógios de Pêndulo:** O princípio do movimento harmônico simples é usado para medir tempo com precisão.
-- **Determinação da Gravidade (\(g\)):** Experimentos com pêndulos podem calcular o valor de \(g\) localmente.
-- **Educação Física:** É um exemplo clássico de movimento periódico.
+### 3. **Período de Oscilação**
 
----
+A equação do período \(T\) para o pêndulo em MHS é dada por:
 
-## Estrutura do Projeto
+![Equação do Período](assets/equation_3.png)
 
-O projeto está estruturado em uma simulação interativa onde você pode ajustar os seguintes parâmetros:
+Onde:
+- \(L\) é o comprimento do fio que suspende o pêndulo.
+- \(g\) é a aceleração gravitacional local.
+- O período \(T\) é o tempo necessário para uma oscilação completa.
 
-1. **Comprimento do Fio (\(L\)):** Controla o período \(T\) do pêndulo.
-2. **Gravidade (\(g\)):** Simula diferentes campos gravitacionais.
-3. **Ângulo Inicial (\(θ₀\)):** Determina a amplitude da oscilação.
-
-A interface permite visualizar, em tempo real, como as oscilações se comportam quando esses valores são alterados.
+Essa equação nos diz que o período \(T\) não depende da massa do pêndulo, mas sim do comprimento do fio e da gravidade local.
 
 ---
 
-## Como Executar
+## **Parâmetros Importantes**
 
-1. Clone o repositório para sua máquina:
-   ```bash
-   git clone https://github.com/seu-usuario/pendulo-simples.git
+### Comprimento (\(L\)):
+- **Descrição:** O comprimento do fio que sustenta o pêndulo.
+- **Efeito:** O aumento de \(L\) faz com que o período (\(T\)) aumente, resultando em um movimento mais lento.
+- **Relação:** A relação \(T = 2\pi\sqrt{\frac{L}{g}}\) mostra como o período é sensível ao comprimento do fio.
+
+### Gravidade (\(g\)):
+- **Descrição:** A aceleração gravitacional no local onde o pêndulo está sendo estudado. 
+- **Efeito:** A gravidade maior acelera o movimento do pêndulo, reduzindo o seu período.
+- **Observação:** Em altitudes maiores ou em outros planetas, o valor de \(g\) pode variar, afetando o período da oscilação.
+
+### Ângulo Inicial (\(θ₀\)):
+- **Descrição:** O ângulo com o qual o pêndulo é deslocado da posição de equilíbrio.
+- **Efeito:** Para pequenos valores de \(θ₀\), o movimento permanece harmônico (período constante). Para grandes valores, o movimento se torna não-linear e o período aumenta.
+
+---
+
+## **Comportamentos Interessantes**
+
+### Oscilações Pequenas (\(θ₀ ≈ 0\)):
+Quando o ângulo inicial \(θ₀\) é pequeno, o movimento pode ser aproximado como harmônico simples, ou seja, a força restauradora é diretamente proporcional ao deslocamento (\(F = -k \cdot x\)).
+
+- **Período constante:** O movimento é periódico, e o período não depende da amplitude de oscilação. A fórmula \(T = 2\pi\sqrt{\frac{L}{g}}\) descreve esse comportamento.
+
+### Oscilações Grandes:
+Quando o ângulo \(θ₀\) aumenta (geralmente mais de 15°), o movimento deixa de ser harmônico simples e se torna não-linear. A força restauradora não segue mais uma relação linear com o deslocamento.
+
+- **Variação do Período:** O período aumenta ligeiramente com o aumento da amplitude (\(θ₀\)).
+
+---
+
+## **Aplicações Práticas**
+
+1. **Relógios de Pêndulo:** 
+   - Utilizam o movimento regular para medir o tempo com precisão. O relógio de pêndulo foi um dos primeiros instrumentos de medição do tempo de alta precisão.
+
+2. **Sismologia:**
+   - Dispositivos pendulares são usados para detectar e medir movimentos sísmicos. O princípio do pêndulo simples é útil para entender os tremores da Terra.
+
+3. **Educação:**
+   - Experimentos simples com pêndulos são frequentemente usados para ensinar conceitos de física como aceleração gravitacional, movimento harmônico e períodos de oscilação.
+
+---
+
+## **Experimentos Recomendados**
+
+1. **Medir o Período \(T\):**
+   - Meça o tempo de 10 oscilações e calcule \(T\).
+   - Varie \(L\) e compare os resultados experimentais com a fórmula teórica \(T = 2\pi\sqrt{\frac{L}{g}}\).
+
+2. **Estudo do Ângulo Inicial (\(θ₀\)):**
+   - Experimente diferentes valores de \(θ₀\) e observe a mudança no período de oscilação.
+
+3. **Gravidade (\(g\)):**
+   - Realize experimentos em diferentes altitudes ou com diferentes valores de \(g\), como em planetas fictícios ou na Lua.
+
+---
+
+## **Referências e Links Úteis**
+
+- [Documentação de Física I (Adicionar link)](#)
+- [Simulações Interativas (Adicionar link)](#)
+- [Artigo Científico sobre Pêndulos (Adicionar link)](#)
+
+---
+
+## **Créditos**
+
+- Este material foi desenvolvido como parte do Projeto Final de Física I.
+- Autor: _[Seu Nome]_.
+- Imagens e gráficos gerados ou adaptados a partir de fontes abertas.
+
+---
+
+## **Licença**
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
