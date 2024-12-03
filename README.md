@@ -71,27 +71,30 @@ A fórmula a seguir é usada para calcular o período no pêndulo simples, relac
 
 ---
 
-## **Notas sobre Energia**
-
-### **Energia Potencial e Cinética**
-- A energia mecânica total do pêndulo é composta por energia potencial gravitacional (\(E_p\)) e energia cinética (\(E_c\)):  
-  \[
-  E_{total} = E_p + E_c
-  \]
-- No ponto mais alto (amplitude máxima):  
-  - \(E_p\) é máxima, \(E_c = 0\).  
-- No ponto mais baixo (posição de equilíbrio):  
-  - \(E_c\) é máxima, \(E_p = 0\).
-
-### **Conservação de Energia**
-- Em um pêndulo simples ideal (sem dissipação):  
-  - A energia mecânica total permanece constante.  
-  \[
-  E_{total} = m \cdot g \cdot h + \frac{1}{2} m v^2
-  \]
-- A troca entre \(E_p\) e \(E_c\) descreve o movimento oscilatório.
-
 ---
+
+## **Energia no Movimento do Pêndulo**
+
+### **Energia Potencial**
+- A energia potencial (\(U\)) é a energia armazenada devido à altura do pêndulo em relação à sua posição de equilíbrio.  
+- **Fórmula:**  
+![Energia Potencial](./potential_energy.png)  
+
+### **Energia Cinética**
+- A energia cinética (\(K\)) é a energia associada ao movimento do pêndulo.  
+- **Fórmula:**  
+![Energia Cinética](./kinetic_energy.png)  
+
+### **Energia Mecânica Total**
+- A energia mecânica total (\(E\)) é a soma da energia potencial e cinética do sistema.  
+- **Fórmula:**  
+![Energia Mecânica Total](./total_mechanical_energy.png)  
+
+### **Conservação da Energia**
+- No movimento de um pêndulo ideal (sem resistência do ar ou atrito), a energia mecânica total é conservada:  
+  - **Altura máxima (\(U_{máx}\)):** Toda a energia é potencial.  
+  - **Velocidade máxima (\(K_{máx}\)):** Toda a energia é cinética.  
+
 
 ## **Aplicações Práticas**
 
