@@ -1,110 +1,110 @@
 # **A Dinâmica do Pêndulo**
 
-## **Descrição Básica do Projeto**
+## **Descrição básica do projeto**
 
-Este projeto é uma simulação gráfica criada para ilustrar o comportamento de um pêndulo simples na Física. O objetivo principal é explorar visualmente o movimento oscilatório, permitindo estudar conceitos como variações no comprimento da corda e na gravidade.
+Este projeto é uma simulação criada para ilustrar o comportamento de um pêndulo simples na Física. O objetivo é fornecer uma visualização gráfica do movimento oscilatório, permitindo o estudo e a compreensão dos conceitos envolvidos. A simulação mostra a trajetória de um pêndulo oscilando em diferentes condições, como variações no comprimento da corda e na gravidade.
 
 ---
 
 ## **Conceitos de Física e Modelo Matemático**
 
 ### **Pêndulo Simples**
+O pêndulo simples é um sistema mecânico que consiste em uma massa puntiforme, ou seja, um corpo com dimensões insignificantes, presa a um fio de massa desprezível e inextensível capaz de oscilar em torno de uma posição fixa. Graças à sua simplicidade, esse pêndulo é bastante usado durante o estudo do movimento harmônico simples. 
 
-Um pêndulo simples é um sistema mecânico composto por uma massa puntiforme presa a um fio inextensível e de massa desprezível. Ele oscila sob a influência das forças peso e tração, criando um movimento harmônico simples (MHS) em condições ideais. Para este modelo, consideramos:
+O pêndulo simples é uma aproximação em que não existem forças dissipativas, ou seja, forças de atrito ou de arraste, atuando sobre quaisquer componentes do sistema. Nesses pêndulos, o movimento oscilatório surge em decorrência da ação das forças peso e tração exercida pelo fio.
 
-- **Sem forças dissipativas** (como atrito ou resistência do ar).  
-- **Sistema idealizado** com movimento oscilatório uniforme.  
+Como as forças peso e tração não se cancelam nesse contexto, já que isso só acontece na posição de equilíbrio, surge uma força resultante de natureza centrípeta, fazendo o pêndulo oscilar em torno de um ponto de equilíbrio. A partir das equações horárias do movimento harmônico simples e das leis de Newton, é possível determinar um conjunto de equações exclusivas para os pêndulos simples. Para isso, considera-se que a resultante entre a força peso e a força de tração é uma força centrípeta. Além disso, a força restauradora do movimento pendular é a componente horizontal do peso:
 
-A força restauradora responsável pelo movimento é a componente horizontal do peso, enquanto a componente vertical é equilibrada pela tração do fio.
+![p](https://github.com/user-attachments/assets/64e54e0f-a57e-4ed2-b7f6-108e3bf362b9)
 
-### **Equação do Período (T)**
+- **Px**: componente horizontal da força peso (N)  
+- **Py**: componente vertical da força peso (N)  
 
-Para um pêndulo simples, o período \(T\) é dado por:
+A fórmula a seguir é usada para calcular o período no pêndulo simples, relacionando o tempo de uma oscilação completa ao tamanho do fio e à aceleração da gravidade local:
 
-\[
-T = 2\pi \sqrt{\frac{L}{g}}
-\]
+![p](https://github.com/user-attachments/assets/049ae54a-5ccb-426f-9723-2638cd0af775)
 
-Onde:  
-- \(T\): Período do ciclo (s).  
-- \(L\): Comprimento do fio (m).  
-- \(g\): Aceleração gravitacional local (\(m/s^2\)).
+**Suposições Adotadas:**
+- O fio é **sem massa** e **inextensível**.  
+- O sistema está sob uma **força gravitacional uniforme**.  
+- Desconsidera-se a resistência do ar.
 
 ---
 
 ## **Equação do Movimento**
 
-1. **Equação Geral do Movimento**  
+1. A equação geral que rege o movimento do pêndulo:  
 
-\[
-\theta'' + \frac{g}{L} \sin(\theta) = 0
-\]
+![p](https://github.com/user-attachments/assets/e0fe851a-274a-4b1c-84ac-072ec8f04195)
 
-2. **Aproximação para Pequenos Ângulos (\( \sin(\theta) \approx \theta\)):**
+2. Para **pequenos ângulos** (sin(θ) ≈ θ):  
 
-\[
-\theta'' + \frac{g}{L} \theta = 0
-\]
-
-Esta simplificação caracteriza o **movimento harmônico simples (MHS)**, permitindo análises mais acessíveis em situações práticas.
+   Esta forma reduzida caracteriza o **movimento harmônico simples**, no qual o pêndulo oscila simetricamente em torno da posição de equilíbrio.
 
 ---
 
-## **Relações e Efeitos**
+## **Relações e Fatores Influentes**
 
-### **1. Comprimento do Fio (\(L\))**
-
-- Relação: **\(T \propto \sqrt{L}\)**  
+### **Comprimento do Fio (\(L\))**
+- O comprimento \(L\) é **inversamente proporcional** à frequência.  
 - **Efeitos:**  
-  - Aumentar \(L\): período mais longo.  
-  - Diminuir \(L\): período mais curto.
+  - Aumentar \(L\): **aumento no período (\(T\))**.  
+  - Diminuir \(L\): **redução no período (\(T\))**.  
+- **Equação do Período:**  
+![Period Equation](./equation_3.png)
 
-### **2. Aceleração Gravitacional (\(g\))**
-
-- Relação: **\(T \propto 1/\sqrt{g}\)**  
+### **Aceleração Gravitacional (\(g\))**
+- A aceleração gravitacional (\(g\)) afeta diretamente a **velocidade da oscilação**.  
 - **Efeitos:**  
-  - Aumentar \(g\): ciclos mais rápidos.  
-  - Diminuir \(g\): ciclos mais lentos.
+  - Aumentar \(g\): ciclos **mais rápidos**.  
+  - Reduzir \(g\): ciclos **mais lentos**.
 
-### **3. Amplitude (\(θ₀\))**
+### **Amplitude (\(θ₀\))**
+- O **ângulo inicial (\(θ₀\))** influencia a altura inicial.  
+- **Efeitos:**  
+  - Para \(θ₀ < 15°\): Movimento harmônico simples, período constante.  
+  - Para \(θ₀ > 15°\): Movimento **não linear**, período aumenta levemente.
 
-- Pequenos ângulos (\(<15°\)): movimento harmônico.  
-- Grandes ângulos (\(>15°\)): movimento não linear, com aumento perceptível no período.
+### **Massa da Bobina (m)**
+- A **massa da bobina não altera o período** ou a frequência do pêndulo (negligenciando a resistência do ar).  
+- Isso ocorre porque a força restauradora (gravidade) e a inércia aumentam proporcionalmente com a massa, anulando sua influência.
 
-### **4. Massa da Bobina (\(m\))**
+---
 
-A massa não afeta o período, pois o movimento do pêndulo depende apenas de \(L\) e \(g\), considerando forças dissipativas desprezíveis.
+## **Notas sobre Energia**
+
+### **Energia Potencial e Cinética**
+- A energia mecânica total do pêndulo é composta por energia potencial gravitacional (\(E_p\)) e energia cinética (\(E_c\)):  
+  \[
+  E_{total} = E_p + E_c
+  \]
+- No ponto mais alto (amplitude máxima):  
+  - \(E_p\) é máxima, \(E_c = 0\).  
+- No ponto mais baixo (posição de equilíbrio):  
+  - \(E_c\) é máxima, \(E_p = 0\).
+
+### **Conservação de Energia**
+- Em um pêndulo simples ideal (sem dissipação):  
+  - A energia mecânica total permanece constante.  
+  \[
+  E_{total} = m \cdot g \cdot h + \frac{1}{2} m v^2
+  \]
+- A troca entre \(E_p\) e \(E_c\) descreve o movimento oscilatório.
 
 ---
 
 ## **Aplicações Práticas**
 
-### **1. Medida de Tempo**
-Relógios de pêndulo utilizam o período constante do pêndulo para cronometragem precisa.
+1. **Medida de Tempo:**  
+   - Relógios de pêndulo aproveitam o período constante do pêndulo para cronometragem precisa.
 
-### **2. Engenharia**
-Bolas de demolição seguem princípios semelhantes para maximizar impacto em alvos específicos.
+2. **Engenharia:**  
+   - Bolas de demolição utilizam princípios semelhantes para maximizar impacto.
 
-### **3. Sismologia**
-Pêndulos ajudam na detecção e medição de movimentos sísmicos.
+3. **Sismologia:**  
+   - Pêndulos são usados para detectar e medir movimentos sísmicos.
 
-### **4. Experimentos de Física**
-Determinação da aceleração gravitacional local (\(g\)) com alta precisão.
-
----
-
-## **Conclusão**
-
-Este projeto demonstra a utilidade de um modelo matemático simples para compreender fenômenos complexos. A simulação interativa oferece uma forma prática de explorar conceitos teóricos e aplicá-los em contextos reais, unindo aprendizado teórico e visualização dinâmica.
+4. **Experimentos de Física:**  
+   - Determinação da aceleração gravitacional local (\(g\)).
 
 ---
-
-## **Imagens Referenciadas**
-
-### Componente Horizontal e Vertical do Peso
-
-![Componente Horizontal e Vertical do Peso](https://github.com/user-attachments/assets/64e54e0f-a57e-4ed2-b7f6-108e3bf362b9)
-
-### Equação do Período no Pêndulo Simples
-
-![Equação do Período](https://github.com/user-attachments/assets/049ae
