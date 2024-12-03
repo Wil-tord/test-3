@@ -8,7 +8,7 @@ Projeto final de Física I: Uma introdução ao comportamento oscilatório de um
 
 O pêndulo simples é uma ferramenta clássica na física para estudar oscilações. Ele consiste em um corpo suspenso por um fio que, ao ser deslocado de sua posição de equilíbrio, realiza movimentos oscilatórios devido à força gravitacional.
 
-![Pêndulo Simples - Placeholder](assets/pendulum.png)
+![Pêndulo Simples - Placeholder](pendulum.png)
 
 ---
 
@@ -20,7 +20,7 @@ As equações que regem o movimento do pêndulo são:
 
 O movimento do pêndulo pode ser descrito pela seguinte equação diferencial de segunda ordem:
 
-![Equação Geral](assets/equation_1.png)
+![Equação Geral](pendulum_equation_1.png)
 
 Essa equação descreve o movimento do pêndulo em função do ângulo de deslocamento (\(θ\)) e da aceleração gravitacional (\(g\)).
 
@@ -28,7 +28,7 @@ Essa equação descreve o movimento do pêndulo em função do ângulo de desloc
 
 Quando o ângulo de oscilação é pequeno (\(θ \ll 1\)), podemos aproximar o seno do ângulo por sua própria medida (ou seja, \( \sin(\theta) \approx \theta \)). Com isso, a equação do movimento se simplifica para:
 
-![Equação Simplificada](assets/equation_2.png)
+![Equação Simplificada](pendulum_equation_2.png)
 
 Este é o modelo de **Movimento Harmônico Simples (MHS)**, o qual é muito mais fácil de resolver e fornece resultados mais próximos das oscilações reais para pequenos ângulos.
 
@@ -36,7 +36,7 @@ Este é o modelo de **Movimento Harmônico Simples (MHS)**, o qual é muito mais
 
 A equação do período \(T\) para o pêndulo em MHS é dada por:
 
-![Equação do Período](assets/equation_3.png)
+![Equação do Período](pendulum_equation_3.png)
 
 Onde:
 - \(L\) é o comprimento do fio que suspende o pêndulo.
